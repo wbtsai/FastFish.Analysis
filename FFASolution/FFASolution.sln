@@ -1,7 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{666A5DA4-975A-48D0-91C6-B35E4511462F}"
+	ProjectSection(SolutionItems) = preProject
+		ChangeLog.txt = ChangeLog.txt
+		ReleaseLog.txt = ReleaseLog.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.Analysis.Core", "FF.Analysis.Core\FF.Analysis.Core.csproj", "{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.Analysis.Document", "FF.Analysis.Document\FF.Analysis.Document.csproj", "{64809D98-A0D7-4DA5-9645-42039F555959}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64809D98-A0D7-4DA5-9645-42039F555959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64809D98-A0D7-4DA5-9645-42039F555959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64809D98-A0D7-4DA5-9645-42039F555959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64809D98-A0D7-4DA5-9645-42039F555959}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
