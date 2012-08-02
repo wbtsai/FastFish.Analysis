@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.Analysis.Core", "FF.Anal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.Analysis.Document", "FF.Analysis.Document\FF.Analysis.Document.csproj", "{64809D98-A0D7-4DA5-9645-42039F555959}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{01D1B391-FC8C-4148-8B20-FEC51564D82A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{64809D98-A0D7-4DA5-9645-42039F555959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64809D98-A0D7-4DA5-9645-42039F555959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64809D98-A0D7-4DA5-9645-42039F555959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D1B391-FC8C-4148-8B20-FEC51564D82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D1B391-FC8C-4148-8B20-FEC51564D82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D1B391-FC8C-4148-8B20-FEC51564D82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D1B391-FC8C-4148-8B20-FEC51564D82A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
