@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C119AC3C-6764-4FB2-BC9E-77EABFA2BF88}</ProjectGuid>
+    <ProjectGuid>{64809D98-A0D7-4DA5-9645-42039F555959}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FF.Analysis.Document</RootNamespace>
@@ -40,10 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Meeting\ProjectMeeting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Meeting\" />
+    <ProjectReference Include="..\FF.Analysis.Core\FF.Analysis.Core.csproj">
+      <Project>{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}</Project>
+      <Name>FF.Analysis.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
