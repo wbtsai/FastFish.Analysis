@@ -4,6 +4,12 @@ Step1 OpenXml
 1. openxml sdk 2.0 http://www.microsoft.com/en-us/download/details.aspx?id=5124
 2. download and install sdk
 
-Step2 implementing Docx
+support docx principle
+1.Support Generic List
+2.Parser Class to Docx
+
+
+
+Step2 Yaml Parser 
 
 

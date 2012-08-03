@@ -44,5 +44,10 @@ namespace FF.Analysis.Core.Docx.Attributes
         /// Is Enabled
         /// </summary>
         public bool IsEnable { get; set; }
+
+        /// <summary>
+        /// Is List Support
+        /// </summary>
+        public bool IsSupportList { get; set; }
     }
 }

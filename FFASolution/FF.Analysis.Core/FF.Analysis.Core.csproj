@@ -49,11 +49,10 @@
     <Compile Include="Docx\DocHelper.cs" />
     <Compile Include="Docx\DocXDocument.cs" />
     <Compile Include="Docx\DocXOptions.cs" />
+    <Compile Include="Docx\Module\DocxContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Docx\Module\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
