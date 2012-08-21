@@ -97,5 +97,19 @@ namespace FF.Analysis.Core.Docx
             }
         }
 
+
+        public static List<SdtBlock> GetTemplateBlocks()
+        {
+            List<SdtBlock> sdtList = new List<SdtBlock>();
+
+            using (WordprocessingDocument doc = WordprocessingDocument.Open("c:\\temp\\會議室-1.docx", true))
+            {
+                MainDocumentPart mainDocumentPart = doc.MainDocumentPart;
+                sdtList = mainDocumentPart.Document.Descendants<SdtBlock>().ToList();
+            
+            }
+
+            return sdtList;
+        }
     }
 }
