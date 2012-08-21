@@ -1,3 +1,7 @@
+2012/08/21
+Add Library CommandLineParser 
+Add Library log4net Version: 1.2.12 http://logging.apache.org/log4net/ 
+
 Created by Nick 2012/08/01
 
 Step1 OpenXml
@@ -11,5 +15,6 @@ support docx principle
 
 
 Step2 Yaml Parser 
+
 
 
