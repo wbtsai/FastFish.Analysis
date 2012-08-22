@@ -51,6 +51,8 @@
     <Compile Include="Docx\DocXDocument.cs" />
     <Compile Include="Docx\DocXOptions.cs" />
     <Compile Include="Docx\Module\DocxContainer.cs" />
+    <Compile Include="Docx\Xml\DocConfig.cs" />
+    <Compile Include="Extensions\XmlExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
