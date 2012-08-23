@@ -32,6 +32,10 @@ namespace FF.Analysis.Document.Meeting
         }
     }
 
+    /// <summary>
+    /// Mapping to 
+    /// </summary>
+    [MapTo(MapId="AAA")]
     public class ProjectM1
     { 
         

@@ -1,3 +1,33 @@
+2012/08/22 
+1. Config InputFile Specification(xml)
+2. xml structure define as DocConfig.cs
+3. Add Xml Serilizer for c# 4.0
+4.Define Version to be Finished
+4.1 Task Schedule
+4.1.1 Version
+      0.1.1 Define All Item
+	  0.1.2 Add others dlls(commandlineparser+log4net)
+	  0.1.3 Add Config Xml mapping+Xml serilizer
+	  0.1.4 Define Class Specification
+	  0.1.5 Parser xml document to class 
+	  0.1.2 support yaml parser 
+	  0.2.1 support wiki parser
+	  0.3.1 Support Docx export
+	  0.4.1 Support xps export
+	  0.5.1 support pdf export
+	  0.6.1 support web export
+	  0.7.1 support chm expore
+	  0.8.1 support media export
+	  0.9.1 support plugin
+	  1.0.0 Release
+
+
+
+2012/08/21
+Add Library CommandLineParser 
+Add Library log4net Version: 1.2.12 http://logging.apache.org/log4net/ 
+
+
 Created by Nick 2012/08/01
 
 Step1 OpenXml
@@ -11,5 +41,6 @@ support docx principle
 
 
 Step2 Yaml Parser 
+
 
 

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}</ProjectGuid>
+    <ProjectGuid>{7DFD0D59-CFDD-4693-ACCF-408D10539C58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FF.Analysis.Core</RootNamespace>
-    <AssemblyName>FF.Analysis.Core</AssemblyName>
+    <RootNamespace>FF.Helper</RootNamespace>
+    <AssemblyName>FF.Helper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Open XML SDK\V2.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,20 +41,11 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Docx\Attributes\DocxTemplateAttribute.cs" />
-    <Compile Include="Docx\Attributes\MapToAttribute.cs" />
-    <Compile Include="Docx\DocHelper.cs" />
-    <Compile Include="Docx\DocXDocument.cs" />
-    <Compile Include="Docx\DocXOptions.cs" />
-    <Compile Include="Docx\Module\DocxContainer.cs" />
-    <Compile Include="Docx\Xml\DocConfig.cs" />
-    <Compile Include="Extensions\XmlExtension.cs" />
+    <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
