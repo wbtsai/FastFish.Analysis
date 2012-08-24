@@ -14,16 +14,20 @@ namespace WebApplication1
 {
     public partial class _Default : System.Web.UI.Page
     {
+        /// <summary>
+        /// Sample App Page Load 
+        /// </summary>
+        /// <document>
+        ///     
+        /// </document>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            //
+            
             if (!this.IsPostBack)
             {
-                //DocHelper.Create("c:\\temp\\template.docx","c:\\temp\\aaa-1.docx");
-                List<SdtBlock> list = DocHelper.GetTemplateBlocks();
-
-                int count = list.Count;
-
+                
             }
         }
     }
