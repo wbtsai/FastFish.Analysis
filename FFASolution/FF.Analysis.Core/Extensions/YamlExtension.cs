@@ -14,7 +14,8 @@ namespace FF.Analysis.Core.Extensions
     /// <summary>
     /// TODO: Update summary.
     /// </summary>
-    public class YamlExtension
+    public static class YamlExtension
     {
+
     }
 }
