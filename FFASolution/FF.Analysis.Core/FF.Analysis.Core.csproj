@@ -31,9 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ColorCode">
+      <HintPath>..\lib\WikiPlex-net40\ColorCode.dll</HintPath>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Open XML SDK\V2.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocX">
+      <HintPath>..\lib\Docx\DocX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,6 +48,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WikiPlex">
+      <HintPath>..\lib\WikiPlex-net40\WikiPlex.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +61,7 @@
     <Compile Include="Docx\DocXOptions.cs" />
     <Compile Include="Docx\Module\DocxContainer.cs" />
     <Compile Include="Docx\Xml\DocConfig.cs" />
+    <Compile Include="Extensions\WikiExtension.cs" />
     <Compile Include="Extensions\XmlExtension.cs" />
     <Compile Include="Extensions\YamlExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
