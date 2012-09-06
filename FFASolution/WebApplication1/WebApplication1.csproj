@@ -137,6 +137,10 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Library\docx\yamlserializer-139f119ba140\yamlserializer_139f119ba140\YamlSerializer\YamlSerializer.csproj">
+      <Project>{AD9F3A60-C492-4823-8F24-6F4854E7CBF5}</Project>
+      <Name>YamlSerializer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FF.Analysis.Core\FF.Analysis.Core.csproj">
       <Project>{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}</Project>
       <Name>FF.Analysis.Core</Name>
