@@ -5,7 +5,7 @@ using System.Text;
 using CommandLine;
 using DocBuilder.Options;
 using log4net;
-using FF.Helper.Log;
+
 using System.Reflection;
 using System.IO;
 
@@ -20,41 +20,41 @@ namespace DocBuilder
         {
             log4net.Config.XmlConfigurator.Configure();
 
-            LogHelper.ToLog("Doc Builder Program ", 
-                log => {
+            //LogHelper.ToLog("Doc Builder Program ", 
+            //    log => {
 
-                    log.Info("Doc Builder Application: Now is：" + DateTime.Now);
+            //        log.Info("Doc Builder Application: Now is：" + DateTime.Now);
 
-                    log.Info("Get Version:" + Assembly.GetExecutingAssembly().GetName().Version);
+            //        log.Info("Get Version:" + Assembly.GetExecutingAssembly().GetName().Version);
 
-                    var options = new Option();
+            //        var options = new Option();
 
-                    ICommandLineParser parser = new CommandLineParser();
+            //        ICommandLineParser parser = new CommandLineParser();
 
-                    if (parser.ParseArguments(args, options))
-                    {
-                        if (options.Verbose)
-                        {
-                            log.Info("Input File="+options.InputFile);
-                        }
-                        else
-                        {
-                            log.Info("working ...");
-                        }
+            //        if (parser.ParseArguments(args, options))
+            //        {
+            //            if (options.Verbose)
+            //            {
+            //                log.Info("Input File="+options.InputFile);
+            //            }
+            //            else
+            //            {
+            //                log.Info("working ...");
+            //            }
 
-                        if (!File.Exists(options.InputFile))
-                        {
-                            throw new Exception("InputFile 檔案不存在，請確認");
-                        }
+            //            if (!File.Exists(options.InputFile))
+            //            {
+            //                throw new Exception("InputFile 檔案不存在，請確認");
+            //            }
 
 
-                    }
-                    log.Info("程式執行成功");
-                    Environment.Exit(0);
-                }, 
-                msgEx => {
-                    Environment.Exit(-1);                     
-                });
+            //        }
+            //        log.Info("程式執行成功");
+            //        Environment.Exit(0);
+            //    }, 
+            //    msgEx => {
+            //        Environment.Exit(-1);                     
+            //    });
 
 
         }

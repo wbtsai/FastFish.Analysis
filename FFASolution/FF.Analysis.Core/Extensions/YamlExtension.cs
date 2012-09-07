@@ -13,6 +13,8 @@ namespace FF.Analysis.Core.Extensions
     using System.Xml.Serialization;
     using System.IO;
     using System.Xml;
+    using System.Yaml.Serialization;
+    using System.Yaml;
 
     /// <summary>
     /// TODO: Update summary.
@@ -25,9 +27,9 @@ namespace FF.Analysis.Core.Extensions
         /// <typeparam name="TSource"></typeparam>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static string SerializeAsYaml<TSource>(this object element) where TSource : new()
+        public static string SerializeAsYaml(this object element)
         {
-            return SerializeAsYaml<TSource>(element, new Type[] { });
+            return SerializeAsYaml(element,null);
         }
 
         /// <summary>
@@ -37,18 +39,12 @@ namespace FF.Analysis.Core.Extensions
         /// <param name="element"></param>
         /// <param name="extraTypes"></param>
         /// <returns></returns>
-        public static string SerializeAsYaml<TSource>(this object element, Type[] extraTypes) where TSource : new()
+        public static string SerializeAsYaml(this object element, YamlConfig config) 
         {
-            var serializer = new XmlSerializer(typeof(TSource), extraTypes);
+           YamlSerializer serializer=new YamlSerializer(config);
 
-            var output = new StringBuilder();
+            return serializer.Serialize(element);
 
-            using (StringWriter writer = new XmlStringWriter(output))
-            {
-                serializer.Serialize(writer, element);
-            }
-
-            return output.ToString();
         }
 
         /// <summary>
@@ -57,9 +53,9 @@ namespace FF.Analysis.Core.Extensions
         /// <typeparam name="TSource"></typeparam>
         /// <param name="element"></param>
         /// <param name="xmlPath"></param>
-        public static void SerializeAsYaml<TSource>(this object element, string xmlPath) where TSource : new()
+        public static void SerializeAsYamlToFile(this object element, string yamlPath)
         {
-            SerializeAsYaml<TSource>(element, xmlPath, new Type[] { });
+            SerializeAsYamlToFile(element, yamlPath, null);
         }
 
         /// <summary>
@@ -69,15 +65,14 @@ namespace FF.Analysis.Core.Extensions
         /// <param name="element"></param>
         /// <param name="xmlPath"></param>
         /// <param name="extraTypes"></param>
-        public static void SerializeAsYaml<TSource>(this object element, string xmlPath, Type[] extraTypes) where TSource : new()
+        public static void SerializeAsYamlToFile(this object element, string yamlPath, YamlConfig config)
         {
-            var serializer = new XmlSerializer(typeof(TSource), extraTypes);
+            YamlSerializer serializer=new YamlSerializer(config);
 
-            using (TextWriter writer = new StreamWriter(xmlPath))
-            {
-                serializer.Serialize(writer, element);
-            }
+            serializer.SerializeToFile(yamlPath,element);
         }
+
+        
 
         /// <summary>
         /// Xml Path to Object
@@ -85,53 +80,36 @@ namespace FF.Analysis.Core.Extensions
         /// <typeparam name="TDestination"></typeparam>
         /// <param name="xmlPath"></param>
         /// <returns></returns>
-        public static TDestination DeserializeYamlFromPath<TDestination>(this string xmlPath) where TDestination : new()
+        public static TDestination DeserializeYamlFromPath<TDestination>(this string yamlPath) where TDestination : new()
         {
-            return DeserializeYamlFromPath<TDestination>(xmlPath, new Type[] { });
+            return DeserializeYamlFromPath<TDestination>(yamlPath,null);
+                        
         }
 
-        /// <summary>
-        /// Xml String Object
-        /// </summary>
-        /// <typeparam name="TDestination"></typeparam>
-        /// <param name="xmlPath"></param>
-        /// <param name="extraTypes"></param>
-        /// <returns></returns>
-        public static TDestination DeserializeYamlFromPath<TDestination>(this string xmlPath, Type[] extraTypes) where TDestination : new()
+        
+
+        public static TDestination DeserializeYamlFromPath<TDestination>(this string yamlPath,YamlConfig config) where TDestination : new()
         {
-            using (var fs = new FileStream(xmlPath, FileMode.Open))
-            {
-                var reader = XmlReader.Create(fs);
-                var serializer = new XmlSerializer(typeof(TDestination), extraTypes);
+            YamlSerializer serializer=new YamlSerializer(config);
 
-                if (serializer.CanDeserialize(reader))
-                {
-                    return (TDestination)serializer.Deserialize(reader);
-                }
-            }
+            object[] obj=serializer.DeserializeFromFile(yamlPath,typeof(TDestination));
 
-            return default(TDestination);
+            return (TDestination)obj[0];
         }
 
-        public static TDestination DeserializeYaml<TDestination>(this string xmString) where TDestination : new()
+        public static TDestination DeserializeYaml<TDestination>(this string yamlString) where TDestination : new()
         {
-            return DeserializeYaml<TDestination>(xmString, new Type[] { });
+            return DeserializeYaml<TDestination>(yamlString,null);
         }
 
-        public static TDestination DeserializeYaml<TDestination>(this string xmlString, Type[] extraTypes) where TDestination : new()
+        public static TDestination DeserializeYaml<TDestination>(this string yamlString,YamlConfig config) where TDestination : new()
         {
-            StringReader read = new StringReader(xmlString);
+            YamlSerializer serializer=new YamlSerializer(config);
 
-            XmlReader reader = new XmlTextReader(read);
+            object[] obj= serializer.Deserialize(yamlString,typeof(TDestination));
 
-            var serializer = new XmlSerializer(typeof(TDestination), extraTypes);
+            return (TDestination)obj[0];
 
-            if (serializer.CanDeserialize(reader))
-            {
-                return (TDestination)serializer.Deserialize(reader);
-            }
-
-            return default(TDestination);
         }
     }
 }
