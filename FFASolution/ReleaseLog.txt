@@ -1,3 +1,9 @@
+2012/09/04
+1.Add library WikiPlex
+2.Add Library Docx
+3.Add Library Html2ToDocx
+4.Add Library Html2Aml 
+
 2012/08/23
 1. 0.1.3.1 Create Empty Docx(Empty+Template)
 2. Create Config.Xml(Empty)+Empty Docx

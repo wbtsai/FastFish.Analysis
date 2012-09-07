@@ -68,6 +68,7 @@
     <Compile Include="Extensions\XmlExtension.cs" />
     <Compile Include="Extensions\YamlExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WikiRender\DocxRender.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
