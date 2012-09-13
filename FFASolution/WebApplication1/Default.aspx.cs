@@ -44,9 +44,9 @@ MMMMM
 
                 //obj.SerializeAsYamlToFile(path);
                               
-                Test1 t =path.DeserializeYamlFromPath<Test1>();
+                //Test1 t =path.DeserializeYamlFromPath<Test1>();
 
-                string cc = t.ID;
+                //string cc = t.ID;
 
             }
         }
