@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8A742771-B81B-47B8-9A52-7B8DEDD1B7F0}</ProjectGuid>
+    <ProjectGuid>{5519E44A-B46B-4CD9-807C-29B9BADFF9F7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FF.Analysis.Core</RootNamespace>
-    <AssemblyName>FF.Analysis.Core</AssemblyName>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,49 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ColorCode">
-      <HintPath>..\lib\WikiPlex-net40\ColorCode.dll</HintPath>
-    </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Open XML SDK\V2.0\lib\DocumentFormat.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="DocX">
-      <HintPath>..\lib\Docx\DocX.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WikiPlex">
-      <HintPath>..\lib\WikiPlex-net40\WikiPlex.dll</HintPath>
-    </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="YamlSerializer, Version=0.9.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\YamlSerializer0902\YamlSerializer.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Docx\Attributes\DocxTemplateAttribute.cs" />
-    <Compile Include="Docx\Attributes\MapToAttribute.cs" />
-    <Compile Include="Docx\DocHelper.cs" />
-    <Compile Include="Docx\DocXDocument.cs" />
-    <Compile Include="Docx\DocXOptions.cs" />
-    <Compile Include="Docx\Module\DocxContainer.cs" />
-    <Compile Include="Docx\Xml\DocConfig.cs" />
-    <Compile Include="Extensions\WikiExtension.cs" />
-    <Compile Include="Extensions\XmlExtension.cs" />
-    <Compile Include="Extensions\YamlExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\FFBasePage.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WikiRender\DocxRender.cs" />
+    <Compile Include="RefCC.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

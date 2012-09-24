@@ -26,24 +26,26 @@ namespace FF.Analysis.Core.Docx.Xml
     ///     <!-- output file folder(fullpath)-->
     ///     <OutputPath>path3</OutputPath>
     ///     <Documents>
-    ///         <!-- support multi doc list 
-    ///             DocMode:Now,Modify,All
-    ///         -->
-    ///         <Doc seq="1" version="2" DocMode="Now" templateName="template.docx" writeType="Docx,Pdf,Xps,Web,Chm" writeTo="AA" Copy="1">
-    ///         <Body>
-    ///             <Add mode="Header" useContent="AA" isInScope="N" mapTo="AA.Person">Y</Add>
-    ///             <Add mode="Cover" useContent="AA" mapTo="M1.Cover">Y</Add>
-    ///             <Add mode="ChangeLog" useContent="DD" mapTo="M1.ChangeLog">Y</Add>
-    ///             <Add mode="Directory" useContent="BB">Y</Add>
-    ///             <Add mode="Section" useContent="CC" mapTo="Meeting">Y</Add>
-    ///             <Add mode="Bookmark" useContent="CC" mapTo="Meeting1">Y</Add>
-    ///             <Add mode="Glossary" useContent="HH" mapTo="M1.Glossary">Y</Add>
-    ///             <Add mode="Footer" useContent="AA">Y</Add>
-    ///         </Body>
-    ///        </Doc>
-    ///         <Doc seq=2 ...>
-    ///             ...
-    ///         </Doc>
+    ///         <Document FileName="XXX.docx" TemplateName="XXX.docx" Copy="2" AddWaterMark="Y" PrintType="ALL">
+    ///             <Requirement Show="Y">
+    ///             <Dir Show="Y"  /> 
+    ///             <ChangLog Show="Y" />
+    ///             <Header Show="Y" />
+    ///             <Section Seq="1" MapTo="Fany" ShowComponentApi="Y" />
+    ///             <DBTable Show="Y" />
+    ///             <Glossary Show="Y" />
+    ///             <Footer Show="Y" />
+    ///         </Document>
+    ///         <Document FileName="XXX.docx" TemplateName="XXX.docx" Copy="2" AddWaterMark="Y" PrintType="ALL">
+    ///             <Requirement Show="Y">
+    ///             <Dir Show="Y"  /> 
+    ///             <ChangLog Show="Y" />
+    ///             <Header Show="Y" />
+    ///             <Section Seq="1" MapTo="FUT.Bank" ShowComponentApi="Y" />
+    ///             <DBTable Show="Y" />
+    ///             <Glossary Show="Y" />
+    ///             <Footer Show="Y" />
+    ///         </Document>
     ///     </Documents>
     /// </FFADoc>              
     /// ]]>
