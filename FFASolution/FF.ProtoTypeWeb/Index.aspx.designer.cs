@@ -13,21 +13,12 @@ namespace FF.ProtoTypeWeb {
     public partial class Index {
         
         /// <summary>
-        /// DynamicBrickUserControl1 control.
+        /// PTUserControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FF.ProtoTypeWeb.UserControl.DynamicBrickUserControl DynamicBrickUserControl1;
-        
-        /// <summary>
-        /// DynamicBrickUserControl2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::FF.ProtoTypeWeb.UserControl.DynamicBrickUserControl DynamicBrickUserControl2;
+        protected global::FF.ProtoTypeWeb.UserControl.PTUserControl PTUserControl1;
     }
 }

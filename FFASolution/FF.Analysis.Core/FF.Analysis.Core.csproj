@@ -66,10 +66,16 @@
     <Compile Include="Docx\DocXOptions.cs" />
     <Compile Include="Docx\Module\DocxContainer.cs" />
     <Compile Include="Docx\Xml\DocConfig.cs" />
+    <Compile Include="Extensions\TypeExtension.cs" />
     <Compile Include="Extensions\WikiExtension.cs" />
     <Compile Include="Extensions\XmlExtension.cs" />
     <Compile Include="Extensions\YamlExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Attributes\LayoutTypeAttribute.cs" />
+    <Compile Include="UI\Attributes\StatusNameAttribute.cs" />
+    <Compile Include="UI\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="UI\FFBasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
